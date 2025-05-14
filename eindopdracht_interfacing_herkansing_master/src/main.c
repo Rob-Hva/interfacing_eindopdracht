@@ -79,7 +79,7 @@ void nrf_init(void){
   NRF24_IRQ_PORT.NRF24_IRQ_CTRL = PORT_ISC_FALLING_gc;
   // Interrupts On
   NRF24_IRQ_PORT.INTCTRL |=
-      (NRF24_IRQ_PORT.INTCTRL & ~PORT_INT0LVL_gm) | PORT_INT0LVL_LO_gc;
+  (NRF24_IRQ_PORT.INTCTRL & ~PORT_INT0LVL_gm) | PORT_INT0LVL_LO_gc;
 
   // Opening pipes
   nrfOpenWritingPipe((uint8_t *) master);
